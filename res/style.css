@@ -1,0 +1,624 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : 2022. dec. 17., 22:24:07
+    Author     : Gerlecz Tamás
+*/
+@font-face
+{
+	font-family: 'monof55';
+	src: url(monof55.ttf);
+}
+
+body{
+    background-color: blanchedalmond;
+    font-family: 'monof55', monospace;
+    color: gray;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    letter-spacing: 3px;
+}
+
+/*navigation bar ---------------------------------------------------------*/
+nav{
+    padding: 10px 30px;
+    text-transform: uppercase;
+    display: flex;
+    justify-content: space-between;
+}
+
+nav a:visited, a:link, a:active{
+    text-decoration: none;
+    color: gray;
+}
+
+nav a:hover{
+    color: black;
+    border-bottom: 2px solid black;
+    padding-bottom: 3px;
+}
+
+nav .logotitle a:hover{
+    border-bottom: none;
+}
+
+.bar{
+    display: none;
+}
+
+.left-nav{
+    display: flex;
+    align-items: center;
+    padding: 10px;
+}
+
+.left-nav .menu{
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.left-nav li{
+    display: inline-block;
+}
+
+.left-nav li a{
+    padding: 10px;
+}
+
+.logotitle{
+    font-size: 40px;
+    padding: 10px;
+    padding-right: 15px;
+}
+
+#logotitle1{
+    display: none;
+}
+
+/*index.html - gallery--------------------------------------*/
+.gallery{
+    padding: 60px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.gallery .column{
+    display: flex;
+    flex-direction: column;
+    width: 30%;
+}
+
+.gallery .column img{
+    width: 100%;
+    border-radius: 15px;
+    box-shadow: 5px 5px 0px rgb(112, 111, 111);
+}
+.unit{
+    position: relative;
+    margin-bottom: 60px;
+}
+.overlay {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  /*height: 100%;*/
+  width: 100%;
+  opacity: 0;
+  transition: .5s ease;
+  background-color: gray;
+  border-radius: 15px;
+}
+
+.unit:hover .overlay {
+  opacity: 0.9;
+}
+
+.text {
+  color: white;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  width: 80%;
+}
+
+
+/*footer---------------------------------------------------------------------*/
+footer{
+    display: flex;
+    background-color: rgba(128, 128, 128, 0.5);
+    text-transform: uppercase;
+    font-size: large;
+}
+
+footer div{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 25%;
+    text-align: center;
+    margin: 1% 0;
+}
+
+footer a:active, a:link, a:visited{
+    text-decoration: none;
+    color: gray;
+}
+
+footer a:hover{
+    color: white
+}
+
+.footer-nav ul, .social ul, .contact-us ul{
+    list-style: none;
+    padding: 20px 0;
+    margin: 0;
+}
+
+.footer-nav ul li, .contact-us ul li, .social ul li{
+    margin: 15px;
+}
+
+.contact-us ul li h3{
+    font-weight: normal;
+    margin: 10px;
+}
+
+.logo img{
+    width: 50%;
+}
+
+/*reviews.html-----------------------------------------------------------------------*/
+.review{
+    background-color:  rgba(128, 128, 128, 0.5);
+    width: 60%;
+    margin: 30px auto;
+    padding: 20px;
+    padding-left: 25px;
+    box-shadow: 5px 5px 0px rgb(112, 111, 111);
+    color: white;
+}
+
+.review .author{
+    text-align: right;
+}
+
+.review i{
+    margin-right: 10px;
+}
+
+.input-inside{
+    font-family: 'monof55', monospace;
+    letter-spacing: 3px;
+    background-color: white;
+    width: 100%;
+    padding: 15px 20px;
+    margin-bottom: 15px;
+    box-sizing: border-box;
+    border: 2px solid #ccc;
+    outline: none;
+    transition: 0.5s;
+}
+
+.review textarea{
+    resize: none;
+    height: 150px;
+}
+
+input:focus, .review textarea:focus{
+    border: 3px solid #555;
+}
+
+.button-inside{
+    text-transform: uppercase;
+    background-color: white;
+    padding: 8px 12px;
+    color: rgba(128, 128, 128, 0.5);
+    box-shadow: 0 0 10px rgb(112, 111, 111);
+}
+
+button{
+    letter-spacing: 3px;
+    border: none;
+    margin-top: 8px;
+}
+
+button:hover{
+    background-color: rgba(128, 128, 128, 0.5);
+    color: white;
+    cursor: pointer;
+}
+
+/*faqs--------------------16px----------------------------------------*/
+.faqs h1{
+    font-weight: normal;
+    padding-left: 10px;
+}
+
+.faqs-container{
+    width: 60%;
+    margin: 3rem auto;
+}
+
+.faq{
+    padding: 0.5rem 1rem;
+    border-bottom: 1px solid gray;
+}
+
+.faq-link{
+    font-size: 1.1rem;
+    color: gray;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0.7rem 0;
+}
+
+.faq-link i{
+    color: lightgray;
+    padding: 0.5rem;
+}
+
+.faq-link .fa-chevron-up{
+    display: none;
+}
+
+.answer{
+    max-height: 0;
+    overflow: hidden;
+    position: relative;
+    background-color: rgba(128, 128, 128, 0.5);
+    transition: max-height 1s;
+    box-shadow: 5px 5px 0px rgb(112, 111, 111);
+}
+
+.answer p{
+    color: white;
+    padding: 1rem;
+}
+
+.faq:target .answer{
+    max-height: 20rem;
+}
+
+.faq:target .faq-link .fa-chevron-down{
+    display: none;
+}
+
+.faq:target .faq-link .fa-chevron-up{
+    display: block;
+}
+
+
+/*about.html-------------------------------------------------------------*/
+.about-container{
+    width: 80vw;
+    margin: 50px auto;
+    background-color: rgba(128, 128, 128, 0.5);
+    box-shadow: 5px 5px 0px rgb(112, 111, 111);
+    color: white;
+    padding-bottom: 48px;
+}
+
+.about{
+    display: flex;
+    padding-left: 70px;
+    padding-right: 70px;
+    padding-top: 100px;
+    padding-bottom: 0;
+}
+
+.about div{
+    text-align: center;
+}
+
+.about .finn{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    
+}
+
+.about img{
+    width: 15vw;
+    height: fit-content;
+    display: block;
+    border: 5px outset rgba(255, 255, 255, 0.7);
+}
+
+.about .bio{
+    padding: 60px;
+    padding-right: 0;
+    font-size: 1.1rem;
+}
+
+.about .bio h1{
+    margin-bottom: 50px;
+}
+
+.about .finn p{
+    background-color: white;
+    color: rgba(128, 128, 128, 0.5);
+    padding: 20px 0;
+    margin: 0;
+    width: 100%;
+}
+
+#events-link{
+    display: block;
+    text-align: center;
+    width: fit-content;
+    margin: 40px auto;
+    margin-top: 80px;
+}
+
+#events-link:hover{
+    background-color: rgba(128, 128, 128, 0.5);
+    color: white;
+}
+
+/*events-----------------------------------------------------------------*/
+.upcoming{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 80%;
+    margin: 50px auto;
+}
+
+.events{
+    width: 60%;
+    background-color: rgba(128, 128, 128, 0.5);
+    color: white;
+    padding: 30px 40px;
+    box-shadow: 5px 5px 0px rgb(112, 111, 111);
+}
+
+.events img{
+    box-shadow: 0 0 15px rgb(112, 111, 111);
+}
+
+.events form{
+    display: none;
+}
+
+.sign-up{
+    margin: 40px 0px;
+    text-align: center;
+}
+
+.sign-up h3{
+    font-weight: normal;
+    margin-bottom: 30px;
+}
+
+.sign-up a{
+    display: block;
+    width: fit-content;
+    margin: 0 auto;
+}
+
+.sign-up a:hover{
+    background-color: rgba(128, 128, 128, 0.5);
+    color: white;
+}
+
+aside{
+    box-shadow: 5px 5px 0px rgb(112, 111, 111);
+    margin-left: auto;
+    background-color: rgba(128, 128, 128, 0.5);
+    color: white;
+    width: 300px;
+    height: 600px;
+    overflow-y: scroll;
+}
+
+aside::-webkit-scrollbar {
+    display: none;
+}
+
+aside .exhibition{
+    padding: 15px;
+    padding-left: 20px;
+    border-bottom: 2px solid white;
+    padding-bottom: 5px;
+}
+
+aside .exhibition div{
+    display: flex;
+    justify-content: space-between;
+}
+
+aside .exhibition div span{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.2rem;
+    margin-left: 15px;
+}
+
+
+@media only screen and (max-width: 1265px){
+
+    .upcoming{
+        width: 90%;
+        margin-right: 1%;
+    }
+
+    aside{
+        width: 200px;
+        height: 500px;
+        
+    }
+
+    .about{
+        padding-top: 70px;
+    }
+
+    .about img{
+        width: 20vw;
+    }
+
+    .about .bio{
+        font-size: 1rem;
+        padding-top: 0;
+    }
+}
+
+
+
+@media only screen and (max-width: 769px){
+    
+    /*navigation bar ---------------------------------------------------------*/
+    #logotitle1{
+        display: block;
+        font-size: 30px;
+    }
+    #logotitle2{
+        display: none;
+    }
+
+    .bar{
+        display: block;
+        margin-top: 25px;
+    }
+
+    .bar:hover{
+        cursor: pointer;
+        color: black;
+        border-bottom: none;
+    }
+
+    .left-nav{
+        display: block;
+    }
+
+    .menu{
+        display: none;
+    }
+
+    .left-nav li{
+        display: block;
+        width: max-content;
+    }
+
+    .left-nav li a{
+        display: block;
+    }
+
+    .menu.active{
+        display: block;
+    }
+
+    /*index.html - gallery--------------------------------------*/
+    .gallery{
+        flex-direction: column;
+    }
+    .gallery .column{
+        width: 100%;
+    }
+
+    /*footer---------------------------------------------------------------------*/
+    footer{
+        display: block;
+    }
+
+    footer div{
+        margin: 0 auto;
+        width: fit-content;
+    }
+
+    /*reviews.html-----------------------------------------------------------------------*/
+    button{
+        width: 100%;
+    }
+
+    .button-inside{
+        padding: 16px 20px;
+    }
+
+    .review{
+        width: 85%;
+    }
+
+    /*faqs------------------------------------------------------------*/
+    .faqs-container{
+        width: 85%;
+    }
+
+    /*about.html-------------------------------------------------------------*/
+    .about-container{
+        width: 85%;
+    }
+
+    .about{
+        display: block;
+        padding-left: 50px;
+        padding-right: 50px
+    }
+
+    .about .bio{
+        padding: 0;
+    }
+
+    .about .bio h1{
+        margin-top: 50px;
+    }
+
+    .about img{
+        width: 40vw;
+    }
+
+    #events-link{
+        margin-top: 40px;
+        margin-bottom: 0;
+    }
+
+    /*events-----------------------------------------------------------------*/
+    .sign-up a{
+        margin-top: 8px;
+    }
+
+    .upcoming{
+        display: block;
+        margin: 50px auto;
+    }
+
+    .events{
+        margin: 0 auto;
+        width: 80%;
+    }
+
+    aside{
+        display: flex;
+        margin-top: 50px;
+        width: 100%;
+        height: auto;
+        overflow-x: scroll;
+        overflow-y: auto;
+        padding-top: 15px;
+    }
+
+    aside::-webkit-scrollbar {
+        display: block;
+    }
+    
+    aside .exhibition{
+        border-right: 2px solid white;
+        border-bottom: none;
+    }
+
+}
+
+

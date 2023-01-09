@@ -1,0 +1,5 @@
+Do you make NFTs?;Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eligendi facere impedit sed fugit asperiores deserunt et adipisci a quasi non.
+Do you teach others?;Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eligendi facere impedit sed fugit asperiores deserunt et adipisci a quasi non. Lorem, ipsum. Lorem ipsum dolor sit amet.
+Do you like digital arts as well?;Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eligendi facere impedit sed fugit asperiores deserunt et adipisci a quasi non.
+Where can we see your art in person?;Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eligendi facere impedit sed fugit asperiores deserunt et adipisci a quasi non. Lorem ipsum dolor sit amet consectetur adipisicing elit. Id, reiciendis.
+Why did you choose art?;Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eligendi facere impedit sed fugit asperiores deserunt et adipisci a quasi non. Lorem ipsum dolor sit amet.
