@@ -6,7 +6,7 @@
                     <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ab eveniet dicta repudiandae assumenda ipsa! Incidunt debitis natus blanditiis optio? Cumque dolorum excepturi commodi vero inventore cupiditate accusantium aspernatur eum saepe eaque, reprehenderit voluptatem, facere qui unde iste neque voluptatibus est. Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque, earum. Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ducimus quo cupiditate eaque a molestias dolores, at odio harum aperiam rerum tenetur dolor dolorem et aspernatur minus ipsum dolorum, possimus provident deleniti repellat. Natus aliquid magnam fuga eligendi veniam, similique incidunt recusandae ipsa nulla culpa dolores ea laborum maiores, saepe labore.</p>
                     <div class="sign-up">
                         <h3>Don't miss any upcoming event!</h3>
-                        <a href="" onclick="showForm()" class="button-inside">Sign up</a>
+                        <span onclick="showForm()" class="button-inside" id="subutton">Sign up</span>
                     </div>
                     <form method="post" id="sign-up-form">
                         <div>
@@ -39,14 +39,14 @@
                 
                     if(strlen($name) > 2 && strlen($email) > 5 && strlen($phone) > 6)
                     {
-                    $sql = "INSERT INTO signedup VALUES (NULL, :name, :email, :phone)";
-                    $query = $pdo -> prepare($sql);
-                    $query -> execute([
-                        'name'=> $name,
-                        'email'=> $email,
-                        'phone'=>$phone,
-                    ]);
-                }
+                        $sql = "INSERT INTO signedup VALUES (NULL, :name, :email, :phone)";
+                        $query = $pdo -> prepare($sql);
+                        $query -> execute([
+                            'name'=> $name,
+                            'email'=> $email,
+                            'phone'=>$phone,
+                        ]);
+                    }
                 }
             ?>
                 <aside>
@@ -78,14 +78,4 @@
                     ?>
                 </aside>
             </div>
-        </main>
         <?php include "include/footer.php"; ?>
-        <script>
-            function showForm() {
-                document.getElementById("sign-up-form").style.display = "block";
-                event.preventDefault();
-            }
-        </script> 
-        <script type="text/javascript" src="script.js"></script>
-    </body>
-</html>

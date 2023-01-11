@@ -30,7 +30,7 @@
                             <textarea name="youropinion" id="inputOpinion" maxlength="1000" placeholder="Your opinion..." class="input-inside"></textarea>
                         </div>
                         <div>
-                            <button name="sendOpinion" class="button-inside">Send review</button>
+                            <button name="sendOpinion" class="button-inside">Submit</button>
                         </div>
                     </form>
                 </div>
@@ -50,17 +50,13 @@
                 
                     if(strlen($name) > 2 && strlen($review) > 5)
                     {
-                    $sql = "INSERT INTO reviews VALUES (NULL, :name, :review)";
-                    $query = $pdo -> prepare($sql);
-                    $query -> execute([
-                        'name'=> $name,
-                        'review'=> $review,
-                    ]);
-                }
+                        $sql = "INSERT INTO reviews VALUES (NULL, :name, :review)";
+                        $query = $pdo -> prepare($sql);
+                        $query -> execute([
+                            'name'=> $name,
+                            'review'=> $review,
+                        ]);
+                    }
                 }
             ?>
-        </main>
         <?php include "include/footer.php"; ?>
-        <script type="text/javascript" src="script.js"></script>
-    </body>
-</html>

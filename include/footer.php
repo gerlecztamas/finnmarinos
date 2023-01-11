@@ -1,4 +1,4 @@
-
+</main>
 <footer>
             <div class="footer-nav">
                 <ul>
@@ -23,3 +23,6 @@
             </div>
             <div class="logo"><img src="res/media/logo.png" alt=""></div>
         </footer>
+        <script type="text/javascript" src="script.js"></script>
+        </body>
+</html>

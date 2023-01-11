@@ -403,15 +403,10 @@ button:hover{
     margin-bottom: 30px;
 }
 
-.sign-up a{
-    display: block;
-    width: fit-content;
-    margin: 0 auto;
-}
-
-.sign-up a:hover{
+.sign-up span:hover{
     background-color: rgba(128, 128, 128, 0.5);
     color: white;
+    cursor: pointer;
 }
 
 aside{
@@ -586,7 +581,7 @@ aside .exhibition div span{
     }
 
     /*events-----------------------------------------------------------------*/
-    .sign-up a{
+    .sign-up span{
         margin-top: 8px;
     }
 
@@ -620,5 +615,3 @@ aside .exhibition div span{
     }
 
 }
-
-

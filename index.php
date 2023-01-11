@@ -12,7 +12,7 @@
     $query = $pdo -> query($sql);
     $gallery = $query -> fetchAll(PDO::FETCH_ASSOC);
     if(count($gallery) == 0){
-        echo 'no pictures';
+        echo '<h1>Gallery is not loaded because it is empty!</h1>';
     }
     $counter = 0;
     for ($i = 0; $i < 3; $i++) {
@@ -21,7 +21,7 @@
                 echo '<div class="unit">
                 <img src="'.$gallery[$counter]["path"].'" alt="">
                 <div class="overlay">
-                    <div class="text">'.$gallery[$counter]["title"].'</h3>
+                    <div class="text"><h3>'.$gallery[$counter]["title"].'</h3>
                         <p>'.$gallery[$counter]["description"].'</p>
                         <p>- '.$gallery[$counter]["year"].' -</p>
                     </div>
@@ -32,8 +32,4 @@
     }
 ?>
             </div>
-        </main>
         <?php include "include/footer.php"; ?>
-        <script type="text/javascript" src="script.js"></script>
-    </body>
-</html>
