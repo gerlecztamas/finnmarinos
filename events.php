@@ -1,9 +1,22 @@
 <?php include "include/begin.php"; ?>
             <div class="upcoming">
                 <div class="events">
-                    <img src="res/media/event2.jpg" alt="" width="100%">
-                    <h2>Lorem, ipsum dolor</h2>
-                    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ab eveniet dicta repudiandae assumenda ipsa! Incidunt debitis natus blanditiis optio? Cumque dolorum excepturi commodi vero inventore cupiditate accusantium aspernatur eum saepe eaque, reprehenderit voluptatem, facere qui unde iste neque voluptatibus est. Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque, earum. Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ducimus quo cupiditate eaque a molestias dolores, at odio harum aperiam rerum tenetur dolor dolorem et aspernatur minus ipsum dolorum, possimus provident deleniti repellat. Natus aliquid magnam fuga eligendi veniam, similique incidunt recusandae ipsa nulla culpa dolores ea laborum maiores, saepe labore.</p>
+                    <?php 
+                        $dbName = "gtamas";
+                        $dbUser = "root";
+                        $dbPass = "mysql";
+        
+                        $dsn = "mysql:host=localhost;dbname=". $dbName .";charset=utf8mb4";
+                        $pdo = new PDO($dsn, $dbUser, $dbPass);
+                        
+                        $sql = "SELECT * FROM `events` ORDER BY id DESC LIMIT 1";
+                        $query = $pdo -> query($sql);
+                        $events = $query -> fetchAll(PDO::FETCH_ASSOC);
+
+                        echo'<img src="'.$events[0]["path"].'" alt="" width="100%">
+                        <h2>'.$events[0]["title"].'</h2>
+                        <p>'.$events[0]["description"].'</p>';
+                    ?>
                     <div class="sign-up">
                         <h3>Don't miss any upcoming event!</h3>
                         <span onclick="showForm()" class="button-inside" id="subutton">Sign up</span>
